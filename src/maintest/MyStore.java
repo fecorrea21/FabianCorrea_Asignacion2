@@ -2,6 +2,7 @@ package maintest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -74,12 +75,9 @@ public class MyStore {
         driver.findElement(By.xpath("//body[@id='index']/main/section[@id='wrapper']/div[@class='container']/div[@id='content-wrapper']/section[@id='main']/section[@id='content']/section[@class='featured-products clearfix']/div[@class='products']/article[2]/div[1]/a[1]")).click();
         Select s = new Select(driver.findElement(By.xpath("//select[@id='group_1']")));
         s.selectByValue("4");
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//input[@id='quantity_wanted']")).clear();
         driver.findElement(By.xpath("//input[@id='quantity_wanted']")).sendKeys("10");
-        driver.findElement(By.xpath("//button[@class='btn btn-primary add-to-cart']")).click();
-        driver.findElement(By.xpath("//span[contains(text(),'×')]")).click();
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         expectedResult = "Hummingbird printed sweater";
         currentResult = driver.getTitle();
         Assert.assertEquals(currentResult, expectedResult, "The title is not the same");
@@ -90,15 +88,25 @@ public class MyStore {
         driver.findElement(By.xpath("//body[@id='index']/main/section[@id='wrapper']/div[@class='container']/div[@id='content-wrapper']/section[@id='main']/section[@id='content']/section[@class='featured-products clearfix']/div[@class='products']/article[3]/div[1]/a[1]")).click();
         Select s = new Select(driver.findElement(By.xpath("//select[@id='group_3']")));
         s.selectByValue("20");
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//input[@id='quantity_wanted']")).clear();
         driver.findElement(By.xpath("//input[@id='quantity_wanted']")).sendKeys("10");
-        driver.findElement(By.xpath("//button[@class='btn btn-primary add-to-cart']")).click();
-        driver.findElement(By.xpath("//span[contains(text(),'×')]")).click();
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         expectedResult = "The best is yet to come' Framed poster";
         currentResult = driver.getTitle();
         Assert.assertEquals(currentResult, expectedResult, "The title is not the same");
+    }
+    @Test(priority = 10)
+    public void productsTheAdventureBegins(){
+        driver.findElement(By.xpath("//body[@id='index']/main/section[@id='wrapper']/div[@class='container']/div[@id='content-wrapper']/section[@id='main']/section[@id='content']/section[@class='featured-products clearfix']/div[@class='products']/article[4]/div[1]/a[1]")).click();
+        Select s = new Select(driver.findElement(By.xpath("//select[@id='group_3']")));
+        s.selectByValue("19");
+        s.selectByValue("20");
+        s.selectByValue("21");
+        driver.findElement(By.xpath("//input[@id='quantity_wanted']")).clear();
+        driver.findElement(By.xpath("//input[@id='quantity_wanted']")).sendKeys("10");
+        expectedResult = "The adventure begins Framed poster";
+        currentResult = driver.getTitle();
+        Assert.assertEquals(expectedResult,currentResult, "The title is not the same");
     }
 
     @AfterMethod
