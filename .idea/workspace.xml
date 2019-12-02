@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef2b8f61-3be7-4a7a-af09-e5c34cb160e8" name="Default Changelist" comment="" />
+    <list default="true" id="ef2b8f61-3be7-4a7a-af09-e5c34cb160e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/maintest/MakePurchase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FabianCorrea_Asignacion2/maintest/CreateUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FabianCorrea_Asignacion2/maintest/CreateUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FabianCorrea_Asignacion2/maintest/MyStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FabianCorrea_Asignacion2/maintest/MyStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maintest/CreateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/maintest/CreateUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maintest/MyStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/maintest/MyStore.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +20,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UIwuof9niHPJH4RSTdyIkRkRVk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -22,6 +34,7 @@
     <property name="Repository.Attach.Annotations" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/maintest" />
@@ -88,6 +101,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MakePurchase" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FabianCorrea_Asignacion2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maintest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="maintest" />
+      <option name="MAIN_CLASS_NAME" value="maintest.MakePurchase" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyStore" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FabianCorrea_Asignacion2" />
       <extension name="coverage">
@@ -110,6 +140,7 @@
         <item itemvalue="TestNG.MyStore" />
         <item itemvalue="TestNG.LogIn" />
         <item itemvalue="TestNG.CreateUser" />
+        <item itemvalue="TestNG.MakePurchase" />
       </list>
     </recent_temporary>
   </component>
@@ -123,11 +154,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575057642965</updated>
-      <workItem from="1575057644521" duration="1353000" />
+      <workItem from="1575057644521" duration="1556000" />
+      <workItem from="1575316180552" duration="5936000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

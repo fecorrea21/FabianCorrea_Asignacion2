@@ -11,7 +11,8 @@ import java.util.concurrent.TimeUnit;
 
 public class CreateUser<user, password> {
 
-    public static CharSequence user = "test19@qa.com";
+    //Change the email number to run the class Login and the test is ok
+    public static CharSequence user = "test20@qa.com";
     public static CharSequence password = "Aa123*";
 
     String baseUrl = "http://serenitybddpractice.com/login?create_account=1 ";

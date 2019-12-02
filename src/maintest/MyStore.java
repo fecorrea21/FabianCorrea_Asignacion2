@@ -2,7 +2,6 @@ package maintest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -58,9 +57,12 @@ public class MyStore {
     }
 
     @Test(priority = 7)
-    public void productsPrintedTshirt() {
+    public void portraitDoorPrintedTshirt() {
         driver.findElement(By.xpath("//body[@id='index']/main/section[@id='wrapper']/div[@class='container']/div[@id='content-wrapper']/section[@id='main']/section[@id='content']/section[@class='featured-products clearfix']/div[@class='products']/article[1]/div[1]/a[1]")).click();
         Select s = new Select(driver.findElement(By.xpath("//select[@id='group_1']")));
+        s.selectByValue("1");
+        s.selectByValue("2");
+        s.selectByValue("3");
         s.selectByValue("4");
         driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//input[@id='quantity_wanted']")).clear();
@@ -108,6 +110,47 @@ public class MyStore {
         currentResult = driver.getTitle();
         Assert.assertEquals(expectedResult,currentResult, "The title is not the same");
     }
+    @Test(priority = 11)
+    public void productsTodayIsaGood(){
+        driver.findElement(By.xpath("//body[@id='index']/main/section[@id='wrapper']/div[@class='container']/div[@id='content-wrapper']/section[@id='main']/section[@id='content']/section[@class='featured-products clearfix']/div[@class='products']/article[5]/div[1]/a[1]")).click();
+        Select s = new Select(driver.findElement(By.xpath("//select[@id='group_3']")));
+        s.selectByValue("19");
+        s.selectByValue("20");
+        s.selectByValue("21");
+        driver.findElement(By.xpath("//input[@id='quantity_wanted']")).clear();
+        driver.findElement(By.xpath("//input[@id='quantity_wanted']")).sendKeys("10");
+        expectedResult = "Today is a good day Framed poster";
+        currentResult = driver.getTitle();
+        Assert.assertEquals(expectedResult, currentResult, "The title is not the same");
+    }
+    @Test(priority = 12)
+    public void productsCupTheBestCome(){
+        driver.findElement(By.xpath("//body[@id='index']/main/section[@id='wrapper']/div[@class='container']/div[@id='content-wrapper']/section[@id='main']/section[@id='content']/section[@class='featured-products clearfix']/div[@class='products']/article[6]/div[1]/a[1]")).click();
+        driver.findElement(By.xpath("//input[@id='quantity_wanted']")).clear();
+        driver.findElement(By.xpath("//input[@id='quantity_wanted']")).sendKeys("20");
+        expectedResult = "Mug The best is yet to come";
+        currentResult = driver.getTitle();
+        Assert.assertEquals(expectedResult, currentResult, "The title is not the same");
+    }
+    @Test(priority = 13)
+    public void productsCupTheAdventureBegins(){
+        driver.findElement(By.xpath("//body[@id='index']/main/section[@id='wrapper']/div[@class='container']/div[@id='content-wrapper']/section[@id='main']/section[@id='content']/section[@class='featured-products clearfix']/div[@class='products']/article[7]/div[1]/a[1]")).click();
+        driver.findElement(By.xpath("//input[@id='quantity_wanted']")).clear();
+        driver.findElement(By.xpath("//input[@id='quantity_wanted']")).sendKeys("20");
+        expectedResult = "Mug The adventure begins";
+        currentResult = driver.getTitle();
+        Assert.assertEquals(expectedResult, currentResult, "The title is not the same");
+    }
+    @Test(priority = 14)
+    public void productsCupTodayIsGoodDay(){
+        driver.findElement(By.xpath("//body[@id='index']/main/section[@id='wrapper']/div[@class='container']/div[@id='content-wrapper']/section[@id='main']/section[@id='content']/section[@class='featured-products clearfix']/div[@class='products']/article[8]/div[1]/a[1]")).click();
+        driver.findElement(By.xpath("//input[@id='quantity_wanted']")).clear();
+        driver.findElement(By.xpath("//input[@id='quantity_wanted']")).sendKeys("20");
+        expectedResult = "Mug Today is a good day";
+        currentResult = driver.getTitle();
+        Assert.assertEquals(expectedResult, currentResult, "The title is not the same");
+    }
+
 
     @AfterMethod
     public void goBackToHomePage() {
